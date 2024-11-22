@@ -86,22 +86,12 @@ const App = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <Toaster />
-      {loggedIn ? (
-        <div>
+    <div>
           <div className='flex justify-end'>
             <button className='px-4 py-2 bg-red-500 text-white rounded' onClick={handleLogout}>Logout</button>
           </div>
           <CardContainer />
         </div>
-      ) : (
-        <LoginForm
-        onLogin={handleLogin}
-        email={email}
-        password={password}
-        setEmail={setEmail}
-        setPassword={setPassword}
-      />
-      )}
     </div>
   );
 };
